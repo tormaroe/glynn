@@ -19,7 +19,7 @@
         </h1>
         <ul class="files">
             <li>README.md</li>
-            <li>Last modified: Wed Dec 16 12:52:36 +0100 2009</li>
+            <li>Last modified: Wed Dec 16 13:28:29 +0100 2009</li>
         </ul>
     </div>
 
@@ -27,7 +27,49 @@
         <div id="content">
     
     <div class="description">
-        
+        <h1>Glynn</h1>
+
+<p>Glynn offers you a bin to easily send a jekyll powered blog to your host through FTP.</p>
+
+<h2>Installation</h2>
+
+<p>Glynn comes as a gem. It has no dependencies other than the ruby default libraries.
+Install it with gem install.</p>
+
+<pre><code>gem install glynn --source http://gemcutter.org
+</code></pre>
+
+<p>That's it ! You now have the Glynn executable on your machine.
+Go to your jekyll project, configure the host and distant directory where the files will be sent.
+For example, this is my _config.yml file :</p>
+
+<pre><code>markdown: rdiscount
+pygments: true
+auto: true
+ftp_host: dmathieu.com
+ftp_dir: /web/portfolio
+</code></pre>
+
+<p>Glynn will connect itself to the host "dmathieu.com" and send every file to the FTP directory /web/portfolio.</p>
+
+<h2>Contributing</h2>
+
+<p>If you think Glynn is great but can be improved, feel free to contribute.
+To do so, you can :</p>
+
+<ul>
+<li><a href="http://help.github.com/forking/">Fork</a> the project</li>
+<li>Do your changes and commit them to your repository</li>
+<li>Test your changes. We won't accept any untested contributions (except if they're not testable).</li>
+<li>Create an <a href="http://github.com/dmathieu/glynn/issues">issue</a> with a link to your commits.</li>
+</ul>
+
+
+<p>And that's it! I'll soon take a look at your issue and review your changes.</p>
+
+<h2>Author</h2>
+
+<p>Damien MATHIEU :: 42 (AT|CHEZ) dmathieu.com</p>
 <script type="text/javascript">$(function() {
   $('a').each(function() { $(this).attr('target', '_blank') })
 })</script>

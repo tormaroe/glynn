@@ -1,10 +1,11 @@
 require 'ftools'
 
 module Glynn
-  class File
-    
-    def self.is_bin?(f)
-      %x(file #{f}) !~ /text/
-    end
+  class File    
+		FILE = Module::File
+		def self.is_bin?(file)
+			s = (FILE.read(file, FILE.stat(file).blksize) || "").split(//)
+			((s.size - s.grep(" ".."~").size) / s.size.to_f) > 0.30
+		end
   end
 end
